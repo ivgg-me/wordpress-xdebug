@@ -1,4 +1,4 @@
-FROM wordpress:5.4.2-php7.4
+FROM wordpress:5.5.0-php7.4
 
 ENV XDEBUG_VERSION=2.9.6
 ENV XDEBUG_COLLECT_ASSIGNMENTS false
