@@ -39,7 +39,7 @@ The image provides furthermore the mount point `/var/xdebug`.
 
 As [profiler output directory](https://xdebug.org/docs/all_settings#profiler_output_dir) will be the directory `/var/xdebug/profiler` configured.
 
-As file to log all (Step Debugging)[https://xdebug.org/docs/remote] connection attempts, failures and communication into, the file `/var/xdebug/remote.log` will be [configured](https://xdebug.org/docs/all_settings#remote_log).
+As file to log all [Step Debugging](https://xdebug.org/docs/remote) connection attempts, failures and communication into, the file `/var/xdebug/remote.log` will be [configured](https://xdebug.org/docs/all_settings#remote_log).
 
 The created images will be published in the Docker Hub Repository [ivgg/wordpress-xdebug](https://hub.docker.com/repository/docker/ivgg/wordpress-xdebug).
 
