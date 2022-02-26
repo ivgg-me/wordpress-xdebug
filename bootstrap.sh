@@ -1,11 +1,12 @@
 !/bin/bash
 
+sed -i 's/xdebug.client_discovery_header=.*/xdebug.client_discovery_header=${XDEBUG_CLIENT_DICOVERY_HEADER:-\"\"}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.client_host=.*/xdebug.client_host=${XDEBUG_CLIENT_HOST}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.client_port=.*/xdebug.client_port=${XDEBUG_CLIENT_PORT}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.collect_assignments=.*/xdebug.collect_assignments=${XDEBUG_COLLECT_ASSIGNMENTS}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
-sed -i 's/xdebug.collect_includes=.*/xdebug.collect_includes=${XDEBUG_COLLECT_INCLUDES}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
-sed -i 's/xdebug.collect_params=.*/xdebug.collect_params=${XDEBUG_COLLECT_PARAMS}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.collect_return=.*/xdebug.collect_return=${XDEBUG_COLLECT_RETURN}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
-sed -i 's/xdebug.collect_vars=.*/xdebug.collect_vars=${XDEBUG_COLLECT_VARS}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
-sed -i 's/xdebug.coverage_enable=.*/xdebug.coverage_enable=${XDEBUG_COLLECT_COVERAGE_ENABLE}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.connect_timeout_ms=.*/xdebug.connect_timeout_ms=${XDEBUG_CONNECTION_TIMEOUT}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.discover_client_host=.*/xdebug.discover_client_host=${XDEBUG_DISCOVER_CLIENT_HOST}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.dump.COOKIE=.*/xdebug.dump.COOKIE=${XDEBUG_DUMP_COOKIE}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.dump.FILES=.*/xdebug.dump.FILES=${XDEBUG_DUMP_FILES}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.dump.GET=.*/xdebug.dump.GET=${XDEBUG_DUMP_GET}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
@@ -16,16 +17,29 @@ sed -i 's/xdebug.dump.SESSION=.*/xdebug.dump.SESSION=${XDEBUG_DUMP_SESSION}/g' /
 sed -i 's/xdebug.dump_globals=.*/xdebug.dump_globals=${XDEBUG_DUMP_GLOBALS}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.dump_once=.*/xdebug.dump_once=${XDEBUG_DUMP_ONCE}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.dump_undefined=.*/xdebug.dump_undefined=${XDEBUG_DUMP_UNDEFINED}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.file_link_format=.*/xdebug.file_link_format=${XDEBUG_FILE_LINK_FORMAT}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.filename_format=.*/xdebug.filename_format=${XDEBUG_FILENAME_FORMAT}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.force_display_errors=.*/xdebug.force_display_errors=${XDEBUG_FORCE_DISPLAY_ERRORS}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.force_error_reporting=.*/xdebug.force_error_reporting=${XDEBUG_FORCE_ERROR_REPORTNG}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.gc_stats_output_name=.*/xdebug.gc_stats_output_name=${XDEBUG_GC_STATS_OUPUT_NAME}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.halt_level=.*/xdebug.halt_level=${XDEBUG_HALT_LEVEL}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.idekey=.*/xdebug.idekey=${XDEBUG_IDEKEY}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
-#sed -i 's/xdebug.profiler_aggregate=.*/xdebug.profiler_aggregate=${XDEBUG_PROFILER_AGGREGATE}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.log_level=.*/xdebug.log_level=${XDEBUG_LOG_LEVEL}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.max_nesting_level=.*/xdebug.max_nesting_level=${XDEBUG_MAX_NESTING_LEVEL}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.max_stack_frames=.*/xdebug.max_stack_frames=${XDEBUG_MAX_STACK_FRAMES}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.profiler_append=.*/xdebug.profiler_append=${XDEBUG_PROFILER_APPEND}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
-sed -i 's/xdebug.profiler_enable=.*/xdebug.profiler_enable=${XDEBUG_PROFILER_ENABLE}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
-sed -i 's/xdebug.remote_log_level=.*/xdebug.remote_log_level=${XDEBUG_REMOTE_LOG_LEVEL}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
-sed -i 's/xdebug.remote_host=.*/xdebug.remote_host=${XDEBUG_REMOTE_HOST}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
-sed -i 's/xdebug.remote_port=.*/xdebug.remote_port=${XDEBUG_REMOTE_PORT}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
-sed -i 's/xdebug.remote_timeout=.*/xdebug.remote_timeout=${XDEBUG_REMOTE_TIMEOUT}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.profiler_output_name=.*/xdebug.profiler_output_name=${XDEBUG_PROFILER_OUTPUT_NAME}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.scream=.*/xdebug.scream=${XDEBUG_SCREAM}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.show_error_trace=.*/xdebug.show_error_trace=${XDEBUG_SHOW_ERROR_TRACE}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
 sed -i 's/xdebug.show_exception_trace=.*/xdebug.show_exception_trace=${XDEBUG_SHOW_EXCEPTION_TRACE}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
-sed -i 's/xdebug.show_local_vars=.*/xdebug.show_local_vars=${XDEBUG_SHOW_LOCAL_VARS}/g' /usr/local/etc/php/conf.d/xdebug.ini
+sed -i 's/xdebug.show_local_vars=.*/xdebug.show_local_vars=${XDEBUG_SHOW_LOCAL_VARS}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.start_upon_error=.*/xdebug.start_upon_error=${XDEBUG_START_UPON_ERROR}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.start_with_request=.*/xdebug.start_with_request=${XDEBUG_START_WITH_REQUEST}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.trace_format=.*/xdebug.trace_format=${XDEBUG_TRACE_FORMAT}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.trace_options=.*/xdebug.trace_options=${XDEBUG_TRACE_OPTIONS}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.trace_output_name=.*/xdebug.trace_output_name=${XDEBUG_TRACE_OUTPUT_NAME}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.trigger_value=.*/xdebug.trigger_value=${XDEBUG_TRIGGER_VALUE:-""}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.use_compression=.*/xdebug.use_compression=${XDEBUG_USE_COMPRESSION}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.var_display_max_children=.*/xdebug.var_display_max_children=${XDEBUG_VAR_DISPLAY_MAX_CHILDREN}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.var_display_max_data=.*/xdebug.var_display_max_data=${XDEBUG_VAR_DISPLAY_MAX_DATA}/g' /usr/local/etc/php/conf.d/xdebug.ini && \
+sed -i 's/xdebug.var_display_max_depth=.*/xdebug.var_display_max_depth=${XDEBUG_VAR_DISPLAY_MAX_DEPTH}/g' /usr/local/etc/php/conf.d/xdebug.ini
